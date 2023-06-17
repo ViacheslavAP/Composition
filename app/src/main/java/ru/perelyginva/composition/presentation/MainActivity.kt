@@ -1,4 +1,4 @@
-package ru.perelyginva.composition
+package ru.perelyginva.composition.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
