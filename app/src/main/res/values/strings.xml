@@ -24,5 +24,9 @@
     <string name="required_percentage">Необходимый процент правильных ответов: %s</string>
     <string name="required_score">Необходимое количество правильных ответов: %s</string>
     <string name="progress_answers">Правильных ответов %s (минимум %s)</string>
+    <string name="title_activity_main2">MainActivity2</string>
+
+
+
 
 </resources>

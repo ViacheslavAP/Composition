@@ -19,7 +19,7 @@
         />
 
     <Button
-        android:id="@+id/button_level_test"
+        android:id="@+id/btn_level_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -28,7 +28,7 @@
         />
 
     <Button
-        android:id="@+id/button_level_easy"
+        android:id="@+id/btn_level_easy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -38,7 +38,7 @@
         />
 
     <Button
-        android:id="@+id/button_level_normal"
+        android:id="@+id/btn_level_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -48,7 +48,7 @@
         />
 
     <Button
-        android:id="@+id/button_level_hard"
+        android:id="@+id/btn_level_hard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

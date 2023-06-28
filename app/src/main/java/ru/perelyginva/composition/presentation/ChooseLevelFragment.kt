@@ -1,12 +1,13 @@
 package ru.perelyginva.composition.presentation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import ru.perelyginva.composition.R
 import ru.perelyginva.composition.databinding.FragmentChooseLevelBinding
+import ru.perelyginva.composition.domain.entity.Level
 
 
 class ChooseLevelFragment : Fragment() {
@@ -28,9 +29,41 @@ class ChooseLevelFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        with(binding){
+            btnLevelTest.setOnClickListener {
+                launchGameFragment(Level.TEST)
+            }
+            btnLevelEasy.setOnClickListener {
+                launchGameFragment(Level.EASY)
+            }
+            btnLevelNormal.setOnClickListener {
+                launchGameFragment(Level.NORMAL)
+            }
+            btnLevelHard.setOnClickListener {
+                launchGameFragment(Level.HARD)
+            }
+        }
+    }
+
+    private fun launchGameFragment(level: Level) {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.main_container, GameFragment.newInstance(level))
+            .addToBackStack(GameFragment.NAME)
+            .commit()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+const val NAME = "ChooseLevelFragment"
+        fun newInstance(): ChooseLevelFragment {
+            return ChooseLevelFragment()
+        }
     }
 
 }

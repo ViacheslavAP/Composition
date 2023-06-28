@@ -48,11 +48,11 @@
             />
 
         <Button
-            android:id="@+id/button_understand"
+            android:id="@+id/btn_understand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="@string/button_understand"
+            android:text="@string/btn_understand"
             app:layout_constraintBottom_toBottomOf="parent"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
