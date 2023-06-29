@@ -31,7 +31,7 @@ class ChooseLevelFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        with(binding){
+        with(binding) {
             btnLevelTest.setOnClickListener {
                 launchGameFragment(Level.TEST)
             }
@@ -60,7 +60,7 @@ class ChooseLevelFragment : Fragment() {
     }
 
     companion object {
-const val NAME = "ChooseLevelFragment"
+        const val NAME = "ChooseLevelFragment"
         fun newInstance(): ChooseLevelFragment {
             return ChooseLevelFragment()
         }

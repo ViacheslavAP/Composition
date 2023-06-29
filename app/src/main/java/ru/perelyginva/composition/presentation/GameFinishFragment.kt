@@ -40,10 +40,15 @@ class GameFinishFragment : Fragment() {
                     retryGame()
                 }
             })
+        binding.buttonRetry.setOnClickListener {
+             retryGame()
+        }
     }
 
     private fun parsArgs() {
-        gameResult = requireArguments().getSerializable(GAME_RESULT) as GameResult
+        requireArguments().getParcelable<GameResult>(GAME_RESULT)?.let {
+            gameResult = it
+        }
     }
 
     private fun retryGame() {
@@ -64,7 +69,7 @@ class GameFinishFragment : Fragment() {
         fun newInstance(gameResult: GameResult): GameFinishFragment {
             return GameFinishFragment().apply {
                 arguments = Bundle().apply {
-                    putSerializable(GAME_RESULT, gameResult)
+                    putParcelable(GAME_RESULT, gameResult)
                 }
             }
         }
